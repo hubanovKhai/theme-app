@@ -1,0 +1,71 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --card-bg: #f4f4f5;
+  --border-color: #e4e4e7;
+  --btn-bg: #27272a;
+  --btn-text: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg-color: #09090b;
+  --text-color: #f4f4f5;
+  --card-bg: #18181b;
+  --border-color: #27272a;
+  --btn-bg: #f4f4f5;
+  --btn-text: #09090b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  padding: 1.25rem 2rem;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  border-bottom: none;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+main {
+  padding: 2rem;
+  flex: 1;
+}
+
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.theme-btn:hover {
+  opacity: 0.9;
+}
